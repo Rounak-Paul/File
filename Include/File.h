@@ -15,8 +15,8 @@ A File handle class written in modern C++
 
 class File {
 public:
-    enum class Mode { READ, WRITE, APPEND };
-    enum class FileType { TEXT, BINARY };
+    enum struct Mode { READ, WRITE, APPEND };
+    enum struct FileType { TEXT, BINARY };
 
     File(const std::string& path, Mode mode, FileType fileType = FileType::TEXT) {
         openFile(path, mode, fileType);
